@@ -1,0 +1,1 @@
+<a tpl='{{< args.tpl }}'>{{< args.title }}</a>

@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+  gw:
+    image: oxyjs/proxy-gateway:latest
+    ports:
+    - 80:80
+  oxy:
+    image: oxyjs/proxy-oxy:latest
+  frontend:
+    image: nginx:alpine
+    volumes:
+    - ./app:/usr/share/nginx/html:ro
+  backend:
+    image: alpine
